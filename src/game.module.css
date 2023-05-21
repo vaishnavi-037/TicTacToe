@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container .title {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.container .row {
+  display: flex;
+}
+
+.container .row .block {
+  background-color: rgba(188, 158, 158, 0.474);
+  height: 110px;
+  width: 110px;
+  padding: 20px;
+  font-size: 50px;
+  border: 1px solid black;
+  outline: none;
+  caret-color: transparent;
+  text-align: center;
+}
+
+.container .row .column {
+  position: relative;
+}
+
+.container .row .column .line {
+  position: absolute;
+  width: 100%;
+  top: 48%;
+  border: 1px solid black;
+}
+
+.container .row .column .straight {
+  position: absolute;
+  height: 100%;
+  left: 48%;
+  border: 1px solid black;
+}
+
+.container .row .column .diagonalLeft {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) calc(50% - 0.8px),
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) calc(50% + 0.8px),
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.container .row .column .diagonalRight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) calc(50% - 0.8px),
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) calc(50% + 0.8px),
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+}
+
+.modal .content {
+  text-align: center;
+  padding: 50px;
+  font-size: 30px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  border-radius: 20px;
+  max-width: 300px;
+}
+
+.modal .content .restart {
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  background-color: black;
+  color: beige;
+  border: none;
+  border-radius: 20px;
+}
+
+.modal .content .text {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.modal .content .bold {
+  font-size: 25px;
+  font-weight: 700;
+}
